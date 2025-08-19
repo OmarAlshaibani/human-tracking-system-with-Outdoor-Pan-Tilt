@@ -1,7 +1,7 @@
-Human Tracking System with Laser Targeting
+# Human Tracking System with Laser Targeting
 A computer vision-based system that automatically detects, tracks, and targets humans using a pan/tilt mount and laser pointer. The system uses YOLOv8 for real-time human detection and can track subjects even when they temporarily leave the camera's field of view.
 
-Overview
+# Overview
 This project integrates several technologies to create an automated human tracking system:
 
 Real-time human detection using YOLOv8
@@ -11,19 +11,19 @@ Qt-based user interface with video monitoring
 Resource monitoring to ensure system stability
 ![System Demo](docs/images/system_demo.jpg)
 
-Hardware Components
+# Hardware Components
 Pan/Tilt Unit: Outdoor Pantilt model 3050DZ
 Camera: USB webcam with minimum 640x480 resolution
 Arduino: Arduino Uno or compatible board for laser control
 Laser Module: 5V laser diode module (3-pin type)
 Computer: System with GPU recommended for optimal performance
-Hardware Setup
+# Hardware Setup
 Mount the camera on the pan/tilt unit
 Connect the laser module to the Arduino (Signal pin to D9)
 Connect the pan/tilt unit to the control computer via serial (RS-485 to USB)
 Connect the Arduino to the computer via USB
 Connect the camera to the computer via USB
-Software Requirements
+# Software Requirements
 Python 3.8 or higher
 OpenCV
 PyQt5
@@ -31,7 +31,7 @@ Ultralytics YOLOv8
 PySerial
 NumPy
 Installation
-Clone this repository:
+# Clone this repository:
 bash
 git clone https://github.com/OmarAlshaibani/human-tracking-system-with-Outdoor-Pan-Tilt.git
 cd human-tracking-system-with-Outdoor-Pan-Tilt
@@ -41,8 +41,8 @@ bash
 pip install -r requirements.txt
 Download the YOLOv8 model:
 bash
-# The system will automatically download YOLOv8n on first run
-# or you can manually download it from Ultralytics
+The system will automatically download YOLOv8n on first run
+or you can manually download it from Ultralytics
 Upload the Arduino code:
 Open the laser_controller.ino file in the Arduino IDE
 Connect your Arduino board
@@ -61,8 +61,8 @@ Adjust tracking sensitivity and movement speed
 Configure targeting options (chest vs. center targeting)
 Common Issues and Solutions
 System Crashes After Running for a Minute
-Problem: The system would crash after running for about a minute, especially on systems with limited resources.
 
+Problem: The system would crash after running for about a minute, especially on systems with limited resources.
 Solution: Implemented resource monitoring that:
 
 Tracks CPU and memory usage in real-time
@@ -82,21 +82,21 @@ Created continuous movement mode for smoother tracking
 Configuration
 The system is highly configurable through the UI. Key settings include:
 
-Detection Confidence: Minimum confidence threshold for human detection
+# Detection Confidence: Minimum confidence threshold for human detection
 Tracking Deadzone: How far a target must move before tracking adjusts
 Movement Smoothing: How smoothly the system follows target movements
 Targeting Mode: Choose between targeting the chest or center of detected humans
 File Structure
 Code
 human-tracking-system/
-├── human_tracker.py        # Main Python application
-├── laser_controller.ino    # Arduino code for laser control
-├── requirements.txt        # Python dependencies
-└── README.md               # This file
+├── human_tracker.py        Main Python application
+├── laser_controller.ino    Arduino code for laser control
+├── requirements.txt        Python dependencies
+└── README.md               This file
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
+# Acknowledgments
 Ultralytics YOLOv8 for object detection
 PyQt5 for the UI framework
 All contributors and testers who helped refine the system
