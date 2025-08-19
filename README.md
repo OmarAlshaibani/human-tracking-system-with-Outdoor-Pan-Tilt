@@ -94,7 +94,7 @@ human-tracking-system/
 ├── requirements.txt        Python dependencies
 └── README.md               This file
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
 
 # Acknowledgments
 Ultralytics YOLOv8 for object detection
